@@ -25,9 +25,9 @@ def index(request):
             )
 
             message_body = (
-                "New job application recieved\n\n",
-                f"Name: {first_name} {last_name}\n",
-                f"Date: {date}\n",
+                "New job application recieved\n\n"
+                f"Name: {first_name} {last_name}\n"
+                f"Date: {date}\n"
                 f"Occupation: {occupation}\n"
                 f"Thanl you."
             )
