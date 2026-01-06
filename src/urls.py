@@ -17,7 +17,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+# Список маршрутів (URL patterns) для проєкту Django.
+# Тут визначаються всі шляхи, які обробляються додатком.
+# Це потрібно для того, щоб сервер знав, які функції чи класи викликати при зверненні до певних URL.
+
 urlpatterns = [
+    # Адмін-панель Django. Дозволяє керувати даними через веб-інтерфейс.
     path('admin/', admin.site.urls),
+
+    # Головна сторінка та всі маршрути додатку job_application.
+    # include дозволяє підключити маршрути з іншого файлу (job_application/urls.py).
+    # Це робить структуру проєкту більш організованою та зручною для підтримки.
     path("", include("job_application.urls")),
 ]
