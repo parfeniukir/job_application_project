@@ -34,12 +34,23 @@ def index(request):
             email_message = EmailMessage(
                 subject="New Job Application",
                 body=message_body,
-                to=[email, "1998ivankaa@gmail.com"]
+                to=[email, "1998ivankaa@gmail.com"],
             )
             email_message.send()
 
-            messages.success(request=request, message=f"Application submitted successfuly for {first_name}")
+            messages.success(
+                request=request,
+                message=f"Application submitted successfuly for {first_name}",
+            )
 
             print(f"{first_name}, {last_name}, {email}, {date}, {occupation}")
 
     return render(request=request, template_name="index.html")
+
+
+def about(request):
+    return render(request=request, template_name="about.html")
+
+# TODO: add contacts
+# def contacts(request):
+#     pass
